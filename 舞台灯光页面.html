@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>舞台灯光 - 艺昂舞台</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- 引入 Font Awesome 图标库 -->
+    <link rel="stylesheet" href="1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -13,7 +12,7 @@
     <nav>
         <div class="nav-container">
             <h1 class="logo">艺昂舞台</h1>
-            <button class="hamburger">
+            <button class="hamburger" aria-label="菜单">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links">
@@ -45,116 +44,142 @@
             </ul>
         </div>
     </nav>
-    <div class="nav-placeholder"></div> <!-- 导航栏占位符 -->
+    <div class="nav-placeholder"></div>
 
-    <!-- 舞台灯光产品介绍 -->
-    <section class="product-intro">
-        <div class="product-header">
-            <h2>舞台灯光</h2>
-            <p>专业舞台灯光设备，为您的演出增添光彩。</p>
+    <!-- 主体内容 -->
+    <main class="main-content">
+        <!-- 竖向选项卡 -->
+        <div class="tab-buttons">
+            <button class="tab-button active" data-tab="tab1" aria-selected="true">产品特点</button>
+            <button class="tab-button" data-tab="tab2">技术参数</button>
+            <button class="tab-button" data-tab="tab3">应用场景</button>
         </div>
 
-        <!-- 产品特点 -->
-        <div class="product-features">
-            <h3>产品特点</h3>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <i class="fas fa-lightbulb"></i>
-                    <h4>高亮度</h4>
-                    <p>采用先进的LED技术，提供超高亮度，满足各种舞台需求。</p>
+        <!-- 内容区域 -->
+        <div class="tab-content">
+            <!-- 产品特点 -->
+            <article id="tab1" class="tab-pane active" role="tabpanel">
+                <h2 class="section-title">核心优势</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-lightbulb feature-icon"></i>
+                        <h3>高亮度照明</h3>
+                        <p>采用最新COB LED技术，亮度可达20000流明</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-palette"></i>
+                        <h4>多彩效果</h4>
+                        <p>支持RGB全彩调节，轻松实现丰富的灯光效果。</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-cogs"></i>
+                        <h4>智能控制</h4>
+                        <p>支持DMX512协议，可与主流灯光控制系统无缝对接。</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-leaf"></i>
+                        <h4>节能环保</h4>
+                        <p>低功耗设计，节能环保，延长使用寿命。</p>
+                    </div>
                 </div>
-                <div class="feature-item">
-                    <i class="fas fa-palette"></i>
-                    <h4>多彩效果</h4>
-                    <p>支持RGB全彩调节，轻松实现丰富的灯光效果。</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-cogs"></i>
-                    <h4>智能控制</h4>
-                    <p>支持DMX512协议，可与主流灯光控制系统无缝对接。</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-leaf"></i>
-                    <h4>节能环保</h4>
-                    <p>低功耗设计，节能环保，延长使用寿命。</p>
-                </div>
-            </div>
-        </div>
+            </article>
 
-        <!-- 技术参数 -->
-        <div class="product-specs">
-            <h3>技术参数</h3>
-            <table>
-                <tr>
-                    <th>参数</th>
-                    <th>值</th>
-                </tr>
-                <tr>
-                    <td>功率</td>
-                    <td>200W</td>
-                </tr>
-                <tr>
-                    <td>光源类型</td>
-                    <td>LED</td>
-                </tr>
-                <tr>
-                    <td>控制协议</td>
-                    <td>DMX512</td>
-                </tr>
-                <tr>
-                    <td>颜色</td>
-                    <td>RGB全彩</td>
-                </tr>
-                <tr>
-                    <td>重量</td>
-                    <td>5.5kg</td>
-                </tr>
-            </table>
-        </div>
+            <!-- 技术参数 -->
+            <article id="tab2" class="tab-pane" role="tabpanel" hidden>
+                <h2 class="section-title">技术规格</h2>
+                <div class="specs-table-wrapper">
+                    <table class="specs-table">
+                        <tr>
+                            <th>参数</th>
+                            <th>值</th>
+                        </tr>
+                        <tr>
+                            <td>功率</td>
+                            <td>200W</td>
+                        </tr>
+                        <tr>
+                            <td>光源类型</td>
+                            <td>LED</td>
+                        </tr>
+                        <tr>
+                            <td>控制协议</td>
+                            <td>DMX512</td>
+                        </tr>
+                        <tr>
+                            <td>颜色</td>
+                            <td>RGB全彩</td>
+                        </tr>
+                        <tr>
+                            <td>重量</td>
+                            <td>5.5kg</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
 
-        <!-- 应用场景 -->
-        <div class="product-applications">
-            <h3>应用场景</h3>
-            <div class="applications-grid">
-                <div class="application-item">
-                    <img src="images/演唱会.jpg" alt="演唱会">
-                    <h4>演唱会</h4>
-                    <p>适用于大型演唱会，提供震撼的视觉效果。</p>
+            <!-- 应用场景 -->
+            <article id="tab3" class="tab-pane" role="tabpanel" hidden>
+                <h2 class="section-title">典型应用</h2>
+                <div class="scenarios-grid">
+                    <figure class="scenario-card">
+                        <img src="images/演唱会.jpg" alt="演唱会应用" loading="lazy">
+                        <figcaption>大型演唱会现场</figcaption>
+                    </figure>
+                    <figure class="scenario-card">
+                        <img src="images/剧院.jpg" alt="剧院" loading="lazy">
+                        <figcaption>沉浸剧院现场</figcaption>
+                    </figure>
+                    <figure class="scenario-card">
+                        <img src="images/会议活动.jpg" alt="会议活动" loading="lazy">
+                        <figcaption>重要会议现场</figcaption>
+                    </figure>
                 </div>
-                <div class="application-item">
-                    <img src="images/剧院.jpg" alt="剧院">
-                    <h4>剧院</h4>
-                    <p>为剧院演出提供精准的灯光控制。</p>
-                </div>
-                <div class="application-item">
-                    <img src="images/会议活动.jpg" alt="会议活动">
-                    <h4>会议活动</h4>
-                    <p>适合各类会议和活动，提升现场氛围。</p>
-                </div>
-            </div>
+            </article>
         </div>
-    </section>
+    </main>
 
     <!-- 页脚 -->
-    <footer>
-        <div class="footer-content">
+    <footer class="site-footer">
+        <div class="footer-container">
             <p>&copy; 2025 艺昂舞台设备科技有限公司</p>
-            <p>邮箱: info@example.com | 电话: 123-456-7890</p>
+            <p>邮箱: info@example.com | 电话: 130-1520-0202</p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // 移动端汉堡菜单交互
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
+        // 优化后的JavaScript
+        document.addEventListener('DOMContentLoaded', () => {
+            // 移动端菜单
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
 
-        // 关闭移动端菜单当点击外部区域
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.nav-container')) {
-                document.querySelector('.nav-links').classList.remove('active');
-            }
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+            });
+
+            // 选项卡切换
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = document.getElementById(button.dataset.tab);
+                    document.querySelectorAll('.tab-pane').forEach(pane => pane.hidden = true);
+                    document.querySelectorAll('.tab-button').forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-selected', 'false');
+                    });
+                    button.classList.add('active');
+                    button.setAttribute('aria-selected', 'true');
+                    target.hidden = false;
+                });
+            });
+
+            // 自动关闭移动菜单
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.nav-container')) {
+                    navLinks.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
         });
     </script>
 </body>
