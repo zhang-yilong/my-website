@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>舞台灯光 - 艺昂舞台</title>
-    <link rel="stylesheet" href="1.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- 导航栏 -->
+    <!-- 导航栏保持原样 -->
     <nav>
         <div class="nav-container">
             <h1 class="logo">艺昂舞台</h1>
@@ -45,94 +45,482 @@
         </div>
     </nav>
     <div class="nav-placeholder"></div>
-
-    <!-- 主体内容 -->
+        <!-- 主体内容 -->
     <main class="main-content">
-        <!-- 竖向选项卡 -->
+        <!-- 产品分类导航 -->
         <div class="tab-buttons">
-            <button class="tab-button active" data-tab="tab1" aria-selected="true">产品特点</button>
-            <button class="tab-button" data-tab="tab2">技术参数</button>
-            <button class="tab-button" data-tab="tab3">应用场景</button>
+            <button class="tab-button"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="all-products"
+                    id="tab-all">
+                产品总览
+            </button>
+            <button class="tab-button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="beam-lights"
+                    id="tab-beam">
+                光束灯
+            </button>
+            <button class="tab-button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="wash-lights"
+                    id="tab-wash">
+                面光灯
+            </button>
+            <button class="tab-button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="rs-lights"
+                    id="tab-rs">
+                LED染色灯
+            </button>
+            <button class="tab-button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="ps-lights"
+                    id="tab-ps">
+                LED频闪灯
+            </button>
+            <button class="tab-button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="jz-lights"
+                    id="tab-jz">
+                LED矩阵
+            </button>
+            <button class="tab-button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="jg-lights"
+                    id="tab-jg">
+                激光
+            </button>
+            <button class="tab-button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="kt-lights"
+                    id="tab-kt">
+                控台
+            </button>
+            <button class="tab-button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="fc-lights"
+                    id="tab-fc">
+                辅助材料
+            </button>
         </div>
 
-        <!-- 内容区域 -->
+        <!-- 产品展示区域 -->
         <div class="tab-content">
-            <!-- 产品特点 -->
-            <article id="tab1" class="tab-pane active" role="tabpanel">
-                <h2 class="section-title">核心优势</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <i class="fas fa-lightbulb feature-icon"></i>
-                        <h3>高亮度照明</h3>
-                        <p>采用最新COB LED技术，亮度可达20000流明</p>
+            <!-- 所有产品 -->
+            <article id="all-products"
+                    role="tabpanel"
+                    aria-labelledby="tab-all"
+                    class="tab-pane">
+                <h2 class="section-title">所有产品</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/舞台灯光/LED染色灯1.jpg"
+                             alt="艺昂LED染色帕灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">LED染色帕灯</h3>
+                            <p class="product-description">百万色彩，随心而变，LED染色帕灯，点亮舞台无限可能！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-palette"></i>
-                        <h4>多彩效果</h4>
-                        <p>支持RGB全彩调节，轻松实现丰富的灯光效果。</p>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/LED矩阵灯1.jpg"
+                             alt="艺昂LED矩阵产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">LED矩阵</h3>
+                            <p class="product-description">LED矩阵灯，像素级控制，打造震撼视觉盛宴！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-cogs"></i>
-                        <h4>智能控制</h4>
-                        <p>支持DMX512协议，可与主流灯光控制系统无缝对接。</p>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/LED频闪灯1.jpg"
+                             alt="艺昂LED频闪产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">LED频闪</h3>
+                            <p class="product-description">LED频闪灯，极速闪烁，瞬间点燃舞台激情！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-leaf"></i>
-                        <h4>节能环保</h4>
-                        <p>低功耗设计，节能环保，延长使用寿命。</p>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/光束灯1.jpg"
+                             alt="艺昂光束灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">光束 260W</h3>
+                            <p class="product-description">光束灯，锐利光束，划破长空，震撼视觉，点燃舞台！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/光束灯1.jpg"
+                             alt="艺昂光束灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">光束 260W</h3>
+                            <p class="product-description">光束灯，锐利光束，划破长空，震撼视觉，点燃舞台！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/光束灯1.jpg"
+                             alt="艺昂光束灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">光束 260W</h3>
+                            <p class="product-description">光束灯，锐利光束，划破长空，震撼视觉，点燃舞台！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/光束灯1.jpg"
+                             alt="艺昂光束灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">光束 260W</h3>
+                            <p class="product-description">光束灯，锐利光束，划破长空，震撼视觉，点燃舞台！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/光束灯1.jpg"
+                             alt="艺昂光束灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">光束 260W</h3>
+                            <p class="product-description">光束灯，锐利光束，划破长空，震撼视觉，点燃舞台！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/光束灯1.jpg"
+                             alt="艺昂光束灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">光束 260W</h3>
+                            <p class="product-description">光束灯，锐利光束，划破长空，震撼视觉，点燃舞台！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/光束灯1.jpg"
+                             alt="艺昂光束灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">光束 260W</h3>
+                            <p class="product-description">光束灯，锐利光束，划破长空，震撼视觉，点燃舞台！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/光束灯1.jpg"
+                             alt="艺昂光束灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">光束 260W</h3>
+                            <p class="product-description">光束灯，锐利光束，划破长空，震撼视觉，点燃舞台！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/光束灯1.jpg"
+                             alt="艺昂光束灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">光束 260W</h3>
+                            <p class="product-description">光束灯，锐利光束，划破长空，震撼视觉，点燃舞台！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/光束灯1.jpg"
+                             alt="艺昂光束灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">光束 260W</h3>
+                            <p class="product-description">光束灯，锐利光束，划破长空，震撼视觉，点燃舞台！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/光束灯1.jpg"
+                             alt="艺昂光束灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">光束 260W</h3>
+                            <p class="product-description">光束灯，锐利光束，划破长空，震撼视觉，点燃舞台！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
                     </div>
                 </div>
             </article>
 
-            <!-- 技术参数 -->
-            <article id="tab2" class="tab-pane" role="tabpanel" hidden>
-                <h2 class="section-title">技术规格</h2>
-                <div class="specs-table-wrapper">
-                    <table class="specs-table">
-                        <tr>
-                            <th>参数</th>
-                            <th>值</th>
-                        </tr>
-                        <tr>
-                            <td>功率</td>
-                            <td>200W</td>
-                        </tr>
-                        <tr>
-                            <td>光源类型</td>
-                            <td>LED</td>
-                        </tr>
-                        <tr>
-                            <td>控制协议</td>
-                            <td>DMX512</td>
-                        </tr>
-                        <tr>
-                            <td>颜色</td>
-                            <td>RGB全彩</td>
-                        </tr>
-                        <tr>
-                            <td>重量</td>
-                            <td>5.5kg</td>
-                        </tr>
-                    </table>
+            <!-- 光束灯 -->
+            <article id="beam-lights"
+                    role="tabpanel"
+                    aria-labelledby="tab-beam"
+                    class="tab-pane"
+                    hidden>
+                <h2 class="section-title">光束灯</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/舞台灯光/光束灯1.jpg"
+                             alt="艺昂光束灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">光束 260W</h3>
+                            <p class="product-description">锐利光束，划破长空，震撼视觉，点燃舞台！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <!-- 后期扩充其他光束灯产品卡片 -->
                 </div>
             </article>
 
-            <!-- 应用场景 -->
-            <article id="tab3" class="tab-pane" role="tabpanel" hidden>
-                <h2 class="section-title">典型应用</h2>
-                <div class="scenarios-grid">
-                    <figure class="scenario-card">
-                        <img src="images/演唱会.jpg" alt="演唱会应用" loading="lazy">
-                        <figcaption>大型演唱会现场</figcaption>
-                    </figure>
-                    <figure class="scenario-card">
-                        <img src="images/剧院.jpg" alt="剧院" loading="lazy">
-                        <figcaption>沉浸剧院现场</figcaption>
-                    </figure>
-                    <figure class="scenario-card">
-                        <img src="images/会议活动.jpg" alt="会议活动" loading="lazy">
-                        <figcaption>重要会议现场</figcaption>
-                    </figure>
+            <!-- 面光灯 -->
+            <article id="wash-lights"
+                    role="tabpanel"
+                    aria-labelledby="tab-wash"
+                    class="tab-pane"
+                    hidden>
+                <h2 class="section-title">面光灯</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/舞台灯光/面光灯2.jpg"
+                             alt="艺昂面光灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">面光灯</h3>
+                            <p class="product-description">舞台之光，点亮你的精彩瞬间！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <!-- 后期扩充其他面光灯产品卡片 -->
+                </div>
+            </article>
+            <!-- LED染色灯 -->
+            <article id="rs-lights"
+                    role="tabpanel"
+                    aria-labelledby="tab-rs"
+                    class="tab-pane"
+                    hidden>
+                <h2 class="section-title">LED染色灯</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/舞台灯光/LED染色灯1.jpg"
+                             alt="艺昂LED染色灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">LED染色灯</h3>
+                            <p class="product-description">百万色彩，随心而变，LED染色帕灯，点亮舞台无限可能！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <!-- 后期扩充其他LED灯产品卡片 -->
+                </div>
+            </article>
+            <!-- LED频闪灯 -->
+            <article id="ps-lights"
+                    role="tabpanel"
+                    aria-labelledby="tab-ps"
+                    class="tab-pane"
+                    hidden>
+                <h2 class="section-title">LED频闪灯</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/舞台灯光/LED频闪灯1.jpg"
+                             alt="艺昂LED频闪灯产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">LED频闪灯</h3>
+                            <p class="product-description">LED频闪灯，极速闪烁，瞬间点燃舞台激情！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <!-- 后期扩充其他LED灯产品卡片 -->
+                </div>
+            </article>
+            <!-- LED矩阵 -->
+            <article id="jz-lights"
+                    role="tabpanel"
+                    aria-labelledby="tab-jz"
+                    class="tab-pane"
+                    hidden>
+                <h2 class="section-title">LED矩阵</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/舞台灯光/LED矩阵灯1.jpg"
+                             alt="艺昂LED矩阵产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">LED矩阵</h3>
+                            <p class="product-description">LED矩阵灯，像素级控制，打造震撼视觉盛宴！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <!-- 后期扩充其他LED灯产品卡片 -->
+                </div>
+            </article>
+            <!-- 激光 -->
+            <article id="jg-lights"
+                    role="tabpanel"
+                    aria-labelledby="tab-jg"
+                    class="tab-pane"
+                    hidden>
+                <h2 class="section-title">激光</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/舞台灯光/激光1.jpg"
+                             alt="艺昂激光产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">激光</h3>
+                            <p class="product-description">激光灯，锐利光束，炫彩夺目，打造未来感十足的视觉盛宴！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <!-- 后期扩充其他激光产品卡片 -->
+                </div>
+            </article>
+            <!-- 控台 -->
+            <article id="kt-lights"
+                    role="tabpanel"
+                    aria-labelledby="tab-kt"
+                    class="tab-pane"
+                    hidden>
+                <h2 class="section-title">控台</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/舞台灯光/控台1.jpg"
+                             alt="艺昂控台产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">控台</h3>
+                            <p class="product-description">多通道输出，可同时控制数百台灯光设备，轻松实现复杂的灯光效果！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/控台2.jpg"
+                             alt="艺昂控台产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">控台</h3>
+                            <p class="product-description">内置多种灯光效果程序，支持自定义编程，一键触发，操作简便。</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/控台3.jpg"
+                             alt="艺昂控台产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">控台</h3>
+                            <p class="product-description">大尺寸触摸屏，界面简洁直观，即使是新手也能快速上手！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/控台4.jpg"
+                             alt="艺昂控台产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">控台</h3>
+                            <p class="product-description">采用高品质元器件，运行稳定可靠，为你的演出保驾护航！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <!-- 后期扩充其他激光产品卡片 -->
+                </div>
+            </article>
+            <!-- 辅助材料 -->
+            <article id="fc-lights"
+                    role="tabpanel"
+                    aria-labelledby="tab-fc"
+                    class="tab-pane"
+                    hidden>
+                <h2 class="section-title">辅助材料</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/舞台灯光/辅助材料1.jpg"
+                             alt="艺昂辅助材料产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">辅助材料</h3>
+                            <p class="product-description">低功耗设计，节能环保，延长使用寿命！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/辅助材料2.jpg"
+                             alt="艺昂辅助材料产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">辅助材料</h3>
+                            <p class="product-description">低功耗设计，节能环保，延长使用寿命！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/辅助材料3.jpg"
+                             alt="艺昂辅助材料产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">辅助材料</h3>
+                            <p class="product-description">低功耗设计，节能环保，延长使用寿命！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/舞台灯光/辅助材料4.jpg"
+                             alt="艺昂辅助材料产品图"
+                             class="product-image"
+                             loading="lazy">
+                        <div class="product-info">
+                            <h3 class="product-title">辅助材料</h3>
+                            <p class="product-description">低功耗设计，节能环保，延长使用寿命！</p>
+                            <span class="product-price">1280￥</span>
+                        </div>
+                    </div>
+                    <!-- 后期扩充其他激光产品卡片 -->
                 </div>
             </article>
         </div>
@@ -147,39 +535,25 @@
     </footer>
 
     <script>
-        // 优化后的JavaScript
         document.addEventListener('DOMContentLoaded', () => {
-            // 移动端菜单
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
 
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
-            });
+            const tabs = document.querySelectorAll('.tab-button');
+            const panels = document.querySelectorAll('.tab-pane');
 
-            // 选项卡切换
-            document.querySelectorAll('.tab-button').forEach(button => {
-                button.addEventListener('click', () => {
-                    const target = document.getElementById(button.dataset.tab);
-                    document.querySelectorAll('.tab-pane').forEach(pane => pane.hidden = true);
-                    document.querySelectorAll('.tab-button').forEach(btn => {
-                        btn.classList.remove('active');
-                        btn.setAttribute('aria-selected', 'false');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => {
+                        t.setAttribute('aria-selected', 'false');
+                        t.classList.remove('active');
                     });
-                    button.classList.add('active');
-                    button.setAttribute('aria-selected', 'true');
+                    tab.setAttribute('aria-selected', 'true');
+                    tab.classList.add('active');
+                    const target = document.getElementById(tab.getAttribute('aria-controls'));
+                    panels.forEach(panel => panel.hidden = true);
                     target.hidden = false;
                 });
             });
-
-            // 自动关闭移动菜单
-            document.addEventListener('click', (e) => {
-                if (!e.target.closest('.nav-container')) {
-                    navLinks.classList.remove('active');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                }
-            });
+            tabs[0].click();
         });
     </script>
 </body>

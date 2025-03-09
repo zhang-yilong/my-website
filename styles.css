@@ -118,7 +118,7 @@ nav {
 /* ===== 主题内容优化 ===== */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('images/背景图1.WebP') center/cover fixed;
+                url('images/主页面/背景图1.WebP') center/cover fixed;
     color: #fff;
     text-align: center;
     padding: 8rem 2rem;
